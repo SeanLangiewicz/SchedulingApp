@@ -1,3 +1,13 @@
+Lessons Learned
+- Connect to an external MYSQL database
+- Add, update and delete data from the MYSQL database
+- Login screen with logging to a text file on who tried to log into the application.
+- Used an interface to export the log information
+- Used DAO to query MYSQL and to implement classes for each needed object.
+- Handled and created custom error messages to handle various errors within the application.
+- Converted time in UTC format to local time
+- Used resource bundle to change language from English to French and back.
+
 Title : C195 Scheduling Application.
 Purpose: The purpose of this application is to give the user the ability to add, update and delete customer records and appointments.
 
