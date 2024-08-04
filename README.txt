@@ -7,6 +7,7 @@ Lessons Learned
 - Handled and created custom error messages to handle various errors within the application.
 - Converted time in UTC format to local time
 - Used resource bundle to change language from English to French and back.
+- Generated Java doc that holds information about all the classes used within the application
 
 Title : C195 Scheduling Application.
 Purpose: The purpose of this application is to give the user the ability to add, update and delete customer records and appointments.
