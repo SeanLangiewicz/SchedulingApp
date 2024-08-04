@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_controllers.Appointments.AddAppointmentController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="106.0" prefWidth="772.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="88.0" prefWidth="772.0">
+               <children>
+                  <Label fx:id="addAppointmentsLbl" alignment="CENTER" prefHeight="78.0" prefWidth="365.0" text="Add Appointment">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="120.0" prefHeight="479.0" prefWidth="400.0">
+         <children>
+            <HBox prefHeight="479.0" prefWidth="400.0">
+               <children>
+                  <HBox prefHeight="479.0" prefWidth="402.0">
+                     <children>
+                        <GridPane prefHeight="470.0" prefWidth="405.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label fx:id="appointmentID" text="Appointment ID" />
+                              <Label fx:id="title" text="Title" GridPane.rowIndex="1" />
+                              <Label fx:id="descriptionLbl" text="Description" GridPane.rowIndex="2" />
+                              <Label fx:id="locationLbl" text="Location" GridPane.rowIndex="3" />
+                              <Label fx:id="contact" text="Contact" GridPane.rowIndex="4" />
+                              <Label fx:id="type" text="Type" GridPane.rowIndex="5" />
+                              <TextField fx:id="appointmentIDFld" editable="false" GridPane.columnIndex="1" />
+                              <TextField fx:id="titleFld" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="descriptionFld" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="locationFld" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="contactFld" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="typeFld" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField fx:id="customerIDFld" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label fx:id="customerID" text="Customer ID" GridPane.rowIndex="6" />
+                           </children>
+                        </GridPane>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="400.0" layoutY="424.0" prefHeight="176.0" prefWidth="400.0">
+         <children>
+            <HBox prefHeight="176.0" prefWidth="400.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="176.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="saveBtn" defaultButton="true" mnemonicParsing="false" onAction="#onActionSaveBtn" prefHeight="42.0" prefWidth="95.0" text="Save" wrapText="true" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="176.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="backBtn" mnemonicParsing="false" onAction="#onActionBackBtn" prefHeight="42.0" prefWidth="99.0" text="Back" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="400.0" layoutY="98.0" prefHeight="326.0" prefWidth="208.0">
+         <children>
+            <HBox prefHeight="326.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="2.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="contactSelectionLbl" alignment="CENTER" contentDisplay="TOP" ellipsisString="" prefHeight="48.0" prefWidth="200.0" text="Select a new contact" textAlignment="CENTER" textOverrun="CLIP" />
+                              <ComboBox fx:id="contactCmbBx" onAction="#onActionContactComboBox" prefHeight="25.0" prefWidth="199.0" promptText="Select a Contact" />
+                              <VBox prefHeight="186.0" prefWidth="199.0">
+                                 <children>
+                                    <Label fx:id="customerSelectionLbl" alignment="CENTER" prefHeight="17.0" prefWidth="200.0" text="Customer List" textAlignment="CENTER" />
+                                    <ComboBox fx:id="customerCmboBox" onAction="#onActionCustomerID" prefHeight="25.0" prefWidth="198.0" promptText="Select a Customer" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="608.0" layoutY="147.0" prefHeight="205.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="29.0" prefWidth="185.0">
+                     <children>
+                        <Label fx:id="dateSelectionLbl" text="Select a Date">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="datePcker" onAction="#onActionSelectDate" prefHeight="44.0" prefWidth="174.0" promptText="Select a Date" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="34.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="hourSelectionLbl" text="Select an Hour">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="hourComboBox" onAction="#onActionSelectHour" prefWidth="150.0" promptText="Select Hours" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="86.0" prefWidth="199.0">
+                     <children>
+                        <Label fx:id="minSelectionLbl" text="Select a Minute">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="minutesComboBox" onAction="#onActionSelectMinutes" prefWidth="150.0" promptText="Select Minutes" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+      </AnchorPane>
+   </children>
+</AnchorPane>

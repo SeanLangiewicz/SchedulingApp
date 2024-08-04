@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_controllers.CustomerRecords.CustomerRecordsController">
+   <children>
+      <AnchorPane layoutX="41.0" layoutY="347.0" prefHeight="100.0" prefWidth="731.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="731.0" spacing="100.0">
+               <children>
+                  <Button fx:id="addRecordBtn" mnemonicParsing="false" onAction="#onActionAddRecord" prefHeight="40.0" prefWidth="155.0" text="Add Record" />
+                  <Button fx:id="updateRecordBtn" mnemonicParsing="false" onAction="#onActionUpdateRecord" prefHeight="40.0" prefWidth="142.0" text="Update Record" />
+                  <Button fx:id="deleteRecordBtn" mnemonicParsing="false" onAction="#onActionDeleteRecord" prefHeight="40.0" prefWidth="152.0" text="Delete Record" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="564.0" layoutY="397.0" prefHeight="197.0" prefWidth="236.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="197.0" prefWidth="236.0">
+               <children>
+                  <Button fx:id="backBtn" alignment="CENTER" mnemonicParsing="false" onAction="#onActionBack" prefHeight="50.0" prefWidth="98.0" text="Back" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="120.0" prefHeight="200.0" prefWidth="782.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="782.0">
+               <children>
+                  <TableView fx:id="recordsTableView" prefHeight="200.0" prefWidth="782.0">
+                    <columns>
+                        <TableColumn id="custID" fx:id="ID" prefWidth="40.0" text="ID" />
+                      <TableColumn id="custName" fx:id="name" prefWidth="108.0" text="Customer Name" />
+                      <TableColumn id="custAddress" fx:id="address" prefWidth="115.0" text="Address" />
+                        <TableColumn id="custPostalCode" fx:id="postal" prefWidth="68.0" text="Postal Code" />
+                        <TableColumn id="custPhoneNumber" fx:id="phone" prefWidth="56.0" text="Phone Number" />
+                        <TableColumn id="createDate" fx:id="createDate" prefWidth="52.0" text="Create Date" />
+                        <TableColumn id="createdBy" fx:id="createdBy" text="Created By" />
+                        <TableColumn id="lastUpdated" fx:id="lastUpdated" prefWidth="74.0" text="Last Updated (Time)" />
+                        <TableColumn id="lastUpdatedBy" fx:id="lastUpdatedBy" prefWidth="111.0" text="Last Updated By" />
+                        <TableColumn id="divID" fx:id="DivID" prefWidth="77.0" text="Division ID" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="100.0" prefWidth="800.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="800.0">
+               <children>
+                  <Label fx:id="recordTitleLbl" text="Records Screen">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
